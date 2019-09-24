@@ -4,11 +4,9 @@ public class Movie {
 
     private Actor actor;
 
-    public Movie(){
+    public Movie(Actor actor){
         System.out.println("movie object created");
-    }
-    public void setActor(Actor actor) {
-        this.actor = actor;
+        this.actor=actor;
     }
 
     public Actor getActor() {
