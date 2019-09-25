@@ -6,16 +6,14 @@
 
     <!-- bean definitions here -->
 
-    <bean id="actor" class="com.stackroute.Actor" >
-        <constructor-arg name="name" value="Suti"></constructor-arg>
-        <constructor-arg name="gender" value="Male"></constructor-arg>
-        <constructor-arg name="age" value="22"></constructor-arg>
+    <bean id="actor1" class="com.stackroute.Actor" >
+        <property name="name" value="Suti"></property>
+        <property name="gender" value="Male"></property>
+        <property name="age" value="22"></property>
     </bean>
 
 
-    <bean id="movie" class="com.stackroute.Movie" scope="prototype">
-        <constructor-arg name="actor" ref="actor"></constructor-arg>
-    </bean>
+    <bean id="movie" class="com.stackroute.Movie" autowire="constructor"></bean>
 
 
 </beans>
