@@ -20,9 +20,9 @@ public class Main {
 
         //Actor actor1= factory.getBean("actor",Actor.class);
 
-        System.out.println("using app context " + movie.getActor().getGender());
-        System.out.println("using app context " + movie.getActor().getName());
-        System.out.println("using app context " + movie.getActor().getAge());
+        System.out.println("using app context " + movie.getActorDetails().getGender());
+        System.out.println("using app context " + movie.getActorDetails().getName());
+        System.out.println("using app context " + movie.getActorDetails().getAge());
 
         // if(beanA == beanB)
         //System.out.println("beanA is equal to beanB ");

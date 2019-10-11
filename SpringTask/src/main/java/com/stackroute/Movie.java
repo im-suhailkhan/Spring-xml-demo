@@ -23,7 +23,7 @@ public class Movie implements ApplicationContextAware, BeanNameAware, BeanFactor
         this.actor1 = actor;
     }
 
-    public Actor getActor() {
+    public Actor getActorDetails() {
         return actor1;
     }
 
