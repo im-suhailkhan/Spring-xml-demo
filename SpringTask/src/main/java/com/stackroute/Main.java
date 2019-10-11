@@ -11,22 +11,25 @@ public class Main {
 
     public static void main(String [] args){
         ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
-        BeanFactory factory= new XmlBeanFactory(new ClassPathResource("beans.xml"));
+        //BeanFactory factory= new XmlBeanFactory(new ClassPathResource("beans.xml"));
 
+        //Movie beanA=context.getBean("movie",Movie.class);
         Movie movie=context.getBean("movie",Movie.class);
-        Actor actor= context.getBean("actor",Actor.class);
+        //Actor actor= context.getBean("actor",Actor.class);
 
-        Actor actor1= factory.getBean("actor",Actor.class);
+        //Actor actor1= factory.getBean("actor",Actor.class);
+
+        System.out.println("using app context " + movie.getActor().getGender());
+        System.out.println("using app context " + movie.getActor().getName());
+        System.out.println("using app context " + movie.getActor().getAge());
+
+        // if(beanA == beanB)
+        //System.out.println("beanA is equal to beanB ");
+        //else
+        //  System.out.println("bean A is not equal to bean B");
 
 
 
-        System.out.println("using appcontext " + actor.getGender());
-        System.out.println("using appcontext " + actor.getAge());
-        System.out.println("using appcontext " + actor.getName());
-
-        System.out.println("using beanFactory " + actor1.getGender());
-        System.out.println("using beanFactory " + actor1.getName());
-        System.out.println("using beanFactory " + actor1.getAge());
 
     }
 
